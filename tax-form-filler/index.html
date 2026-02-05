@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Form PDF Filler</title>
+  <script type="module" crossorigin src="/assets/index-C3Pna393.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CrfQFpP5.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 Tax Form PDF Filler</h1>
+      <p>Automatically fill IRS tax forms from Excel spreadsheets</p>
+      <p style="font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">Currently supports: Form 1040, Form 8949 • More forms coming soon!</p>
+    </header>
+
+    <main>
+      <div class="card">
+        <h2>1. Select Tax Year</h2>
+        <div class="form-group">
+          <label for="taxYear">Tax Year:</label>
+          <select id="taxYear">
+            <option value="2025">2025</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>2. Upload Excel File</h2>
+        <div class="form-group">
+          <label for="xlsxFile">Choose Excel file (.xlsx):</label>
+          <input type="file" id="xlsxFile" accept=".xlsx,.xls" />
+        </div>
+        <div id="status" class="status status-info">
+          Ready. Please upload an Excel file.
+        </div>
+        <pre id="formsInfo" class="forms-info"></pre>
+      </div>
+
+      <div class="card">
+        <h2>3. Download Filled PDFs</h2>
+        <button id="downloadPdf" class="btn btn-primary" disabled>
+          📥 Download Filled PDFs (ZIP)
+        </button>
+      </div>
+
+      <div class="card info-card">
+        <h3>🔒 Privacy & Security</h3>
+        <p><strong>Your data never leaves your computer.</strong> This application runs entirely in your browser (client-side). No data is uploaded to any server. Your Excel file and PDFs are processed locally on your device.</p>
+        <p>💡 <em>Tip:</em> Your Excel file only needs numerical data (amounts, dates, quantities) - no personal information like names, addresses, or SSN is required.</p>
+      </div>
+
+      <div class="card info-card">
+        <h3>ℹ️ How to Use</h3>
+        <ol>
+          <li><strong>Select your tax year</strong> from the dropdown</li>
+          <li><strong>Prepare one Excel file</strong> with sheets named:
+            <ul>
+              <li><code>f1040</code> - Form 1040 data</li>
+              <li><code>f8949</code> - Capital gains/losses</li>
+            </ul>
+          </li>
+          <li><strong>Upload the Excel file</strong> - The app will parse your data</li>
+          <li><strong>Download the ZIP file</strong> containing all filled PDFs</li>
+        </ol>
+
+        <h3>📊 Excel Format for Form 8949</h3>
+        <p>Your sheet should have these columns (in any order):</p>
+        <ul>
+          <li><strong>Quantity</strong> - Number of shares</li>
+          <li><strong>Name</strong> - Security name</li>
+          <li><strong>Purchase Date</strong> - Date acquired</li>
+          <li><strong>Sell Date</strong> - Date sold</li>
+          <li><strong>Purchase Price</strong> - Cost basis</li>
+          <li><strong>Sell Price</strong> - Sale proceeds</li>
+          <li><strong>Code</strong> - Adjustment code (optional, e.g., W for wash sale)</li>
+          <li><strong>Adjustment</strong> - Adjustment amount (optional, default 0). Gain/Loss = Proceeds - Cost - Adjustment</li>
+        </ul>
+
+        <h3>📊 Excel Format for Form 1040</h3>
+        <p>Two columns format:</p>
+        <ul>
+          <li><strong>Variable:</strong> Line numbers (e.g., "Line 1a", "Line 2a")</li>
+          <li><strong>Value:</strong> Amounts</li>
+        </ul>
+
+        <!-- <h3>🛠️ Developer Tools</h3>
+        <p>Open browser console and use:</p>
+        <ul>
+          <li><code>debugApp.printFields('f8949')</code> - List all fields in a form</li>
+          <li><code>debugApp.generateFieldMap('f8949')</code> - Generate labeled PDF</li>
+          <li><code>debugApp.getSupportedForms()</code> - List supported forms</li>
+        </ul> -->
+      </div>
+    </main>
+
+    <footer>
+      <p>Made with ❤️ for easier tax filing</p>
+      <p class="disclaimer">⚠️ This tool is for convenience only. Please verify all filled forms before submission.</p>
+    </footer>
+  </div>
+
+</body>
+</html>

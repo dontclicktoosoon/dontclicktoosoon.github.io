@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - Don't Click Too Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">dontclicktoosoon</a>
+      <div class="nav-links">
+        <a href="/#tools" class="nav-link">Tools</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="about-section">
+      <h1 class="section-title">About This Project</h1>
+      
+      <div class="about-content">
+        <h2>Why "Don't Click Too Soon"?</h2>
+        <p>
+          We've all been there: clicking "I Agree" without reading the terms, or submitting forms 
+          without double-checking. This site exists to slow you down (in a good way) and give you 
+          tools to understand what you're agreeing to or filing.
+        </p>
+
+        <h2>Our Philosophy</h2>
+        <ul>
+          <li><strong>Privacy First:</strong> All tools run in your browser. We collect no data.</li>
+          <li><strong>Open Source:</strong> Our code is transparent and verifiable.</li>
+          <li><strong>Free Forever:</strong> Bureaucracy is hard enough without paywalls.</li>
+          <li><strong>User-Friendly:</strong> Complex processes, simplified.</li>
+        </ul>
+
+        <h2>Current Tools</h2>
+        <p>
+          <strong>Tax Form Filler (2025):</strong> Automatically fill IRS Forms 1040 and 8949 from 
+          Excel spreadsheets. Perfect for tracking capital gains from stock sales, crypto, or ESPP transactions.
+        </p>
+
+        <h2>Coming Soon</h2>
+        <p>
+          <strong>Terms Simplified:</strong> Paste any Terms & Conditions and get a plain-English 
+          summary of what you're actually agreeing to.
+        </p>
+
+        <h2>Technical Details</h2>
+        <p>
+          Built with TypeScript, Vite, and pdf-lib. All processing happens client-side using 
+          modern web APIs. No servers, no databases, no tracking.
+        </p>
+
+        <h2>Contributing</h2>
+        <p>
+          This project is open source. Found a bug? Want to add a form? Check out our 
+          <a href="https://github.com/yourusername/dontclicktoosoon" target="_blank" rel="noopener">GitHub repository</a>.
+        </p>
+
+        <h2>Disclaimer</h2>
+        <p>
+          These tools are provided as-is for informational purposes. They are not legal advice, 
+          tax advice, or financial advice. Always verify outputs before submitting official documents.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions? Feedback? Reach out via GitHub Issues or email [your email if you want to share].
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 dontclicktoosoon.com</p>
+      <p class="footer-disclaimer">All tools provided as-is. Not legal or tax advice. Verify all outputs before use.</p>
+    </div>
+  </footer>
+
+  <style>
+    .about-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .about-content {
+      color: var(--text-muted);
+    }
+
+    .about-content h2 {
+      color: var(--yellow);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .about-content p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .about-content ul {
+      list-style-position: inside;
+      margin-bottom: 1rem;
+    }
+
+    .about-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .about-content a {
+      color: var(--yellow);
+      text-decoration: underline;
+    }
+
+    .about-content a:hover {
+      color: var(--yellow-hover);
+    }
+  </style>
+</body>
+</html>

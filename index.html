@@ -3,25 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>dontclicktoosoon</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      background-color: #2e2e2e; /* dark grey */
-      color: #ffd700; /* yellow */
-      font-family: 'Roboto Mono', monospace;
-      display: flex;
-      height: 100vh;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-size: 2rem;
-      user-select: none;
-    }
-  </style>
+  <title>Don't Click Too Soon - Navigate Life's Bureaucracy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  We're coming very soon.
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">dontclicktoosoon</a>
+      <div class="nav-links">
+        <a href="#tools" class="nav-link">Tools</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="hero-title">Don't Click Too Soon</h1>
+      <p class="hero-subtitle">Tools to help you navigate life's bureaucracy</p>
+      <p class="hero-tagline">Read before you click. Check before you file.</p>
+    </section>
+
+    <section id="tools" class="tools-section">
+      <h2 class="section-title">Available Tools</h2>
+      
+      <div class="tools-grid">
+        <a href="tax-form-filler/" class="tool-card">
+          <div class="tool-icon">📝</div>
+          <h3 class="tool-title">Tax Form Filler</h3>
+          <p class="tool-description">
+            Automatically fill IRS Forms 1040 and 8949 from Excel spreadsheets. 
+            Client-side processing means your data never leaves your computer.
+          </p>
+          <div class="tool-meta">
+            <span class="badge">Free</span>
+            <span class="badge">No Data Collection</span>
+            <span class="badge">2025 Tax Year</span>
+          </div>
+          <span class="tool-cta">Launch Tool →</span>
+        </a>
+
+        <div class="tool-card coming-soon">
+          <div class="tool-icon">⚖️</div>
+          <h3 class="tool-title">Terms Simplified</h3>
+          <p class="tool-description">
+            Understand terms & conditions in plain English. No more legal jargon.
+          </p>
+          <div class="tool-meta">
+            <span class="badge badge-warning">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission-section">
+      <div class="mission-content">
+        <h2 class="section-title">Our Mission</h2>
+        <p>We believe navigating bureaucracy shouldn't require a law degree or a CPA. Our tools simplify complex processes while keeping your data private and secure.</p>
+        <p><strong>Everything runs in your browser. No data is collected. Ever.</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 dontclicktoosoon.com</p>
+      <p class="footer-disclaimer">All tools provided as-is. Not legal or tax advice. Verify all outputs before use.</p>
+    </div>
+  </footer>
 </body>
 </html>
