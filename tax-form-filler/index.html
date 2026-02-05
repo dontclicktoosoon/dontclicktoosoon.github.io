@@ -53,37 +53,44 @@
 
       <div class="card info-card">
         <h3>ℹ️ How to Use</h3>
-        <ol>
-          <li><strong>Select your tax year</strong> from the dropdown</li>
-          <li><strong>Prepare one Excel file</strong> with sheets named:
-            <ul>
-              <li><code>f1040</code> - Form 1040 data</li>
-              <li><code>f8949</code> - Capital gains/losses</li>
-            </ul>
-          </li>
-          <li><strong>Upload the Excel file</strong> - The app will parse your data</li>
-          <li><strong>Download the ZIP file</strong> containing all filled PDFs</li>
-        </ol>
+<div class="card info-card">
+  <h3>ℹ️ How to Use</h3>
+      <ol>
+        <li><strong>Select your tax year</strong> from the dropdown</li>
+        <li><strong>Prepare one Excel file</strong> with sheets named:
+          <ul>
+            <li><code>f1040</code> - Form 1040 data</li>
+            <li><code>f8949</code> - Capital gains/losses</li>
+          </ul>
+          <div style="background: #fef9c3; padding: 0.75rem; border-radius: 0.5rem; margin-top: 0.75rem; border: 1px solid #fde047;">
+            <a href="./templates/2025_template.xlsx" download style="color: #854d0e; text-decoration: underline; font-weight: bold;">
+              Download our Excel template
+            </a> with pre-formatted sheets and column headers.
+          </div>
+        </li>
+        <li><strong>Upload the Excel file</strong> - The app will parse your data</li>
+        <li><strong>Download the ZIP file</strong> containing all filled PDFs</li>
+      </ol>
 
-        <h3>📊 Excel Format for Form 8949</h3>
-        <p>Your sheet should have these columns (in any order):</p>
+      <h3>✨ What Each Form Does</h3>
+      
+        <h4>Form 1040 - Individual Income Tax Return</h4>
         <ul>
-          <li><strong>Quantity</strong> - Number of shares</li>
-          <li><strong>Name</strong> - Security name</li>
-          <li><strong>Purchase Date</strong> - Date acquired</li>
-          <li><strong>Sell Date</strong> - Date sold</li>
-          <li><strong>Purchase Price</strong> - Cost basis</li>
-          <li><strong>Sell Price</strong> - Sale proceeds</li>
-          <li><strong>Code</strong> - Adjustment code (optional, e.g., W for wash sale)</li>
-          <li><strong>Adjustment</strong> - Adjustment amount (optional, default 0). Gain/Loss = Proceeds - Cost - Adjustment</li>
+          <li>Automatically fills all line items from your data</li>
+          <li>Performs addition and subtraction calculations</li>
+          <li>Computes totals across pages</li>
         </ul>
 
-        <h3>📊 Excel Format for Form 1040</h3>
-        <p>Two columns format:</p>
+        <h4>Form 8949 - Capital Gains & Losses</h4>
         <ul>
-          <li><strong>Variable:</strong> Line numbers (e.g., "Line 1a", "Line 2a")</li>
-          <li><strong>Value:</strong> Amounts</li>
+          <li>Calculates gain/loss for each transaction (Proceeds - Cost - Adjustment)</li>
+          <li>Automatically separates short-term (≤1 year) and long-term (>1 year) based on dates</li>
+          <li>Computes total proceeds, total cost basis, and total gain/loss</li>
+          <li>Creates multiple 8949 forms if you have more data</li>
         </ul>
+
+
+
 
         <!-- <h3>🛠️ Developer Tools</h3>
         <p>Open browser console and use:</p>
@@ -96,7 +103,7 @@
     </main>
 
     <footer>
-      <p>Made with ❤️ for easier tax filing</p>
+      <p>Made with ❤️ and Claude for easier tax filing</p>
       <p class="disclaimer">⚠️ This tool is for convenience only. Please verify all filled forms before submission.</p>
     </footer>
   </div>
